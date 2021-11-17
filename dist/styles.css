@@ -2,23 +2,41 @@ body {
   margin: 0;
 }
 .header {
-  background-color: blueviolet;
+  background-color: #3f51b5;
   height: 70px;
   flex-shrink: 0;
+}
+.header__basket {
+  background-color: dodgerblue;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-right: 5px;
+  height: 60px;
+  width: 60px;
+  border: 1px solid blue;
+  border-radius: 100%;
+}
+.header__basket--image {
+  display: flex;
+  height: 70%;
+  align-self: center;
 }
 .wrapper {
   font-size: 24px;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  border: 1px solid red;
 }
 .main {
   display: flex;
   flex: 1 1 auto;
 }
 .main__menu {
-  background-color: #93adad;
+  background-color: #b0b0b1;
   width: auto;
   padding-right: 20px;
   flex-shrink: 0;
@@ -32,6 +50,8 @@ body {
   background-color: #e2e1e9;
   width: 200px;
   height: 250px;
+  border: 1px solid gray;
+  margin: 1px;
 }
 .main__items__item--tittle {
   font-size: 20px;
