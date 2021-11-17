@@ -1,0 +1,85 @@
+// out: ../dist/styles.css
+
+body{
+    margin: 0;
+}
+
+.header{
+    background-color: blueviolet;  
+    // border: 1px solid black; 
+    height: 70px;
+    flex-shrink: 0;
+}
+
+.wrapper{
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;  
+    height: 100vh;
+    border: 1px solid red; 
+}
+
+
+
+.main{
+    // background-color: coral;
+    // border: 1px solid black;
+    display: flex;
+    flex: 1 1 auto;
+    // justify-content: right;
+    // flex-grow: 1;
+    // flex-shrink: 0;
+    // flex-basis: 700px;
+
+    &__menu{
+        background-color: rgb(147, 173, 173);
+        // border: 1px solid black;
+        width: auto;
+        padding-right: 20px;
+        flex-shrink: 0;
+    }
+
+    &__items{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        &__item{
+            background-color: rgb(226, 225, 233);
+            width: 200px;
+            height: 250px;
+            // border: 1px dotted black;
+            
+            &--tittle{
+                font-size: 20px;
+                font-weight: bold;
+                height: 10%;
+            }
+
+            &--description{
+                font-size: 14px;
+                overflow-y: auto;
+                height: 25%;
+            }
+
+            &--image{
+                height: 50%;
+            }
+
+            &--button{
+                height: 20px;
+                width: 100px;
+            }
+        }
+    }
+    
+}
+
+
+
+.footer{
+    background-color: burlywood;
+    // border: 1px solid black;
+    height: 70px;
+    flex-shrink: 0;
+}

@@ -1,6 +1,8 @@
+body {
+  margin: 0;
+}
 .header {
   background-color: blueviolet;
-  border: 1px solid black;
   height: 70px;
   flex-shrink: 0;
 }
@@ -12,15 +14,13 @@
   border: 1px solid red;
 }
 .main {
-  background-color: coral;
-  border: 1px solid black;
   display: flex;
   flex: 1 1 auto;
 }
 .main__menu {
-  background-color: cadetblue;
-  border: 1px solid black;
-  width: 150px;
+  background-color: #93adad;
+  width: auto;
+  padding-right: 20px;
   flex-shrink: 0;
 }
 .main__items {
@@ -29,14 +29,29 @@
   align-content: flex-start;
 }
 .main__items__item {
-  background-color: darkgreen;
+  background-color: #e2e1e9;
   width: 200px;
   height: 250px;
-  border: 1px dotted black;
+}
+.main__items__item--tittle {
+  font-size: 20px;
+  font-weight: bold;
+  height: 10%;
+}
+.main__items__item--description {
+  font-size: 14px;
+  overflow-y: auto;
+  height: 25%;
+}
+.main__items__item--image {
+  height: 50%;
+}
+.main__items__item--button {
+  height: 20px;
+  width: 100px;
 }
 .footer {
   background-color: burlywood;
-  border: 1px solid black;
   height: 70px;
   flex-shrink: 0;
 }
