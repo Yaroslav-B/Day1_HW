@@ -69,6 +69,7 @@ body {
 .main__items__item--button {
   height: 20px;
   width: 100px;
+  background-color: -internal-light-dark(#efefef, #3b3b3b);
 }
 .footer {
   background-color: burlywood;
