@@ -48,3 +48,4 @@ const Backet = {
 }
 
 Backet.updateBacketPage();
+App.updateBacketCountIcon();
