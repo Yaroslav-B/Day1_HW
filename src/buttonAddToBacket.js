@@ -8,8 +8,12 @@ const ButtonAdding = {
         let product = {};
         let products = [];
         let length = 0;
+        let elem = e.target;
 
-        e.target.value = "Added";
+        elem.value = "Added";
+        elem.style.color = "#4caf50";
+        elem.style.fontStyle = "italic";
+        elem.style.fontWeight = "bold";
         // var elem = document.querySelector(".main__items__item--button");  
         
         product.tittle = e.target.parentElement.children[0].textContent;
