@@ -1,3 +1,5 @@
+"use strict";
+
 console.log("Index.js is loading...")
 
 const App = {

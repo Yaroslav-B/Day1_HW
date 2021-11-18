@@ -1,3 +1,4 @@
+"use strict";
 
 const Backet = {
     length: 0,
@@ -7,7 +8,7 @@ const Backet = {
 
         if(length > 0)
         {
-            for (let i = 0; i < products.length; i++) {
+            for (let i = 0; i < length; i++) {
                 const product = products[i];
                 
                 let elemProd = document.createElement("div");
@@ -37,6 +38,10 @@ const Backet = {
 
     getAddedProducts: () => {
         let products = JSON.parse(sessionStorage.getItem("products"));
+        if(products === null)
+        {
+            products = [];
+        }
         length = products.length;
         return products;
     }  
