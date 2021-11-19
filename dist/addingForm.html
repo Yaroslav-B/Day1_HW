@@ -9,25 +9,30 @@
 </head>
 <body>
     <div class="testbox">
-        <form action="/">
+        <form name="addingNewProductForm">
           <div class="banner">
             <h1>Adding Form</h1>
           </div>
           <div class="item">
             <p>Tittle</p>
             <div class="name-item">
-              <input type="text" name="name" placeholder="Tittle" />
+              <input type="text" name="tittle" placeholder="Tittle" required />
             </div>
           </div>
           <div class="item">
             <p>Description</p>
-            <textarea rows="3" placeholder="Description"></textarea>
+            <textarea rows="3" name="description" placeholder="Description" required></textarea>
           </div>
+          <p>Image URL</p>
+            <div class="image-block">
+              <input type="url" name="ImageUrl" placeholder="URL" />
+            </div>
           <div class="btn-block">
-            <button type="submit" >Add</button>
-            <button type="reset" >Resset</button>
+            <button class="btn-block_add" type="submit" >Add</button>
+            <button class="btn-block_resset" type="reset" >Resset</button>
           </div>
         </form>
       </div>
+      <script src="../src/addingNewProduct.js"></script>
 </body>
 </html>
