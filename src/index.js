@@ -10,6 +10,22 @@ const App = {
     },
     products: [],
 
+    Main: function(){
+
+        let page = "";
+        page = location.href.split("/").slice(-1).toString(); 
+
+        if(page.includes("index")) {
+            this.UpdateListOfProductsOnMainPage();
+            this.UpdateBacketCountIcon();
+        }
+
+        if(page.includes("backet")) {
+            this.UpdateBacketCountIcon();
+        }
+    },
+
+
     UpdateBacketCountIcon: function(){
         let prods = JSON.parse(sessionStorage.getItem("products"));
         let elem = document.querySelector(".header__basket--counter");
@@ -101,7 +117,6 @@ const App = {
     
 }
 
+App.Main();
 
-App.UpdateBacketCountIcon();
-App.UpdateListOfProductsOnMainPage();
 console.log("Index.js is loaded.")
