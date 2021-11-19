@@ -30,7 +30,7 @@ const Backet = {
                 elemProd.appendChild(elemDesc);
                 elemProd.appendChild(elemSt);
                 
-                let mainItems = document.querySelector("div.main__items");
+                let mainItems = document.querySelector(".backet__items");
                 mainItems.appendChild(elemProd);                
             }           
         }
