@@ -62,6 +62,7 @@ body {
   height: 250px;
   border: 1px solid gray;
   margin: 1px;
+  padding: 3px;
 }
 .main__items__item--tittle {
   font-size: 20px;
@@ -75,6 +76,7 @@ body {
 }
 .main__items__item--image {
   height: 50%;
+  max-width: 100%;
 }
 .main__items__item--button {
   height: 20px;
