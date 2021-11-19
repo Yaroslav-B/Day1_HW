@@ -3,7 +3,7 @@
 const Backet = {
     length: 0,
 
-    updateBacketPage: () => {
+    UpdateBacketPage: () => {
         let products = Backet.getAddedProducts();
 
         if(length > 0)
@@ -47,5 +47,5 @@ const Backet = {
     }  
 }
 
-Backet.updateBacketPage();
-App.updateBacketCountIcon();
+Backet.UpdateBacketPage();
+App.UpdateBacketCountIcon();

@@ -10,9 +10,6 @@ const AddingNewProductToStore = {
         
         let elemRes = document.querySelector(".btn-block_resset");
         elemRes.addEventListener("click", this.resetForm);
-
-        let elemImgUrl = document.addingNewProductForm.ImageUrl;
-        elemImgUrl.addEventListener("", this.resetForm);
     },
     
     addNewProduct: function(e){

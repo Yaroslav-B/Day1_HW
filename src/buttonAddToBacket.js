@@ -28,7 +28,7 @@ const ButtonAdding = {
         
         products[length] = product;
         sessionStorage.setItem("products", JSON.stringify(products));
-        App.updateBacketCountIcon();
+        App.UpdateBacketCountIcon();
         console.log("Added product:\n" + product.tittle + "\n" + product.description);
     },
 
