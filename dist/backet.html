@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Backet</title>
     <link rel="stylesheet" href="Styles/backetStyles.css"/>
+    <link rel="stylesheet" href="Styles/navigationMenu.css"/>
 </head>
 <body>
     <div class="wrapper">
@@ -18,11 +19,36 @@
 
         <div class="main">
             <div class="main__menu">
-                <ul>
-                    <li><a href="index.html">Products</a></li>
-                    <li><a href="addingForm.html">Add new product</a></li>
-                    <li><a href="backet.html">My Backet</a></li>
-                </ul>
+                <nav>
+                    <ul>
+                      <li>
+                        <a href="index.html">Home</a>
+                      </li>
+                      <li>
+                            <a href="#">Categories</a>
+                            <ul>
+                                <li>
+                                    <a id="refSmartphones" href="#">Smartphones</a>
+                                </li>
+                                <li>
+                                    <a id="refComputerMouses" href="#">Computer mouses</a>
+                                </li>
+                                <li>
+                                    <a id="refSmartWatches" href="#">Smart Watches</a>
+                                </li>
+                                <li>
+                                    <a id="refOthers" href="#">Others</a>
+                                </li>
+                            </ul>
+                      </li>
+                      <li>
+                        <a href="addingForm.html">Add new product</a>                        
+                      </li>
+                      <li>
+                        <a href="backet.html">My Backet</a>                    
+                      </li>
+                    </ul>
+                  </nav>
             </div>
 
             <div class="backet__items">
