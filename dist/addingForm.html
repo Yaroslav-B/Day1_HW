@@ -20,6 +20,15 @@
             </div>
           </div>
           <div class="item">
+            <label for="Category">Category:</label>
+                <select id="category" name="category">
+                    <option value="Others">Others</option>
+                    <option value="Smartphones">Smartphones</option>
+                    <option value="SmartWatches">SmartWatches</option>
+                    <option value="ComputerMouses">ComputerMouses</option>
+                </select>
+          </div>
+          <div class="item">
             <p>Description</p>
             <textarea rows="3" name="description" placeholder="Description" required></textarea>
           </div>
@@ -31,6 +40,7 @@
             <button class="btn-block_add" type="submit" >Add</button>
             <button class="btn-block_resset" type="reset" >Resset</button>
           </div>
+          <a id="refBackHome" href="index.html">&laquo;Back home</a>
         </form>
       </div>
       <script src="../src/addingNewProduct.js"></script>

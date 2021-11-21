@@ -19,6 +19,7 @@ const AddingNewProductToStore = {
         product.tittle = form.tittle.value;
         product.description = form.description.value;
         product.image = form.ImageUrl.value;
+        product.category = form.category.value;
 
         if(product.tittle == "" || product.description == "")
         {
