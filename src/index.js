@@ -25,7 +25,7 @@ const App = {
 
         if(page.includes("index")) {
             this.UpdateListOfProductsOnMainPage();
-            this.UpdateBacketCountIcon();
+            this.UpdateBasketCountIcon();
 
             let navReferences = document.getElementsByClassName("nav__ref--category");
 
@@ -35,13 +35,13 @@ const App = {
             }
         }
 
-        if(page.includes("backet")) {
-            this.UpdateBacketCountIcon();
+        if(page.includes("basket")) {
+            this.UpdateBasketCountIcon();
         }
     },
 
 
-    UpdateBacketCountIcon: function(){
+    UpdateBasketCountIcon: function(){
         let prods = JSON.parse(sessionStorage.getItem("products"));
         let elem = document.querySelector(".header__basket--counter");
         let count = 0;
@@ -104,7 +104,7 @@ const App = {
         }   
     },
 
-    getBacketCount: function() {
+    getBasketCount: function() {
         return this.products.length;
     },
 

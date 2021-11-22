@@ -1,10 +1,10 @@
 "use strict";
 
-const Backet = {
+const Basket = {
     length: 0,
 
-    UpdateBacketPage: () => {
-        let products = Backet.getAddedProducts();
+    UpdateBasketPage: () => {
+        let products = Basket.getAddedProducts();
 
         if(length > 0)
         {
@@ -30,7 +30,7 @@ const Backet = {
                 elemProd.appendChild(elemDesc);
                 elemProd.appendChild(elemSt);
                 
-                let mainItems = document.querySelector(".backet__items");
+                let mainItems = document.querySelector(".basket__items");
                 mainItems.appendChild(elemProd);                
             }           
         }
@@ -47,5 +47,5 @@ const Backet = {
     }  
 }
 
-Backet.UpdateBacketPage();
-App.UpdateBacketCountIcon();
+Basket.UpdateBasketPage();
+App.UpdateBasketCountIcon();

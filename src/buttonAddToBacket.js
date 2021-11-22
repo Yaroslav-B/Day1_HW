@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("buttonAddToBacket.js is loading...");
+console.log("buttonAddToBasket.js is loading...");
 
 const ButtonAdding = {
     
@@ -28,7 +28,7 @@ const ButtonAdding = {
         
         products[length] = product;
         sessionStorage.setItem("products", JSON.stringify(products));
-        App.UpdateBacketCountIcon();
+        App.UpdateBasketCountIcon();
         console.log("Added product:\n" + product.tittle + "\n" + product.description);
     },
 
@@ -45,7 +45,7 @@ const ButtonAdding = {
 
 ButtonAdding.addEvents();
 
-console.log("buttonAddToBacket.js is loaded.");
+console.log("buttonAddToBasket.js is loaded.");
 
 
 
