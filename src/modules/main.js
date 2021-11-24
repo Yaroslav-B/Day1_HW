@@ -1,6 +1,10 @@
 "use strict";
 
-console.log("Index.js is loading...")
+console.log("main.js is loading...");
+
+import {ButtonAdding} from './mainAddToBasket.js';
+import {UpdateBasketCountIcon} from './basket.js';
+
 
 const App = {
     product: {
@@ -20,36 +24,15 @@ const App = {
 
     Main: function(){
 
-        let page = "";
-        page = location.href.split("/").slice(-1).toString(); 
-
-        if(page.includes("index")) {
-            this.UpdateListOfProductsOnMainPage();
-            this.UpdateBasketCountIcon();
-
-            let navReferences = document.getElementsByClassName("nav__ref--category");
-
-            for (let i = 0; i < navReferences.length; i++) {
-                const element = navReferences[i];
-                element.addEventListener("click", this.showProductsInCategory);     
-            }
-        }
-
-        if(page.includes("basket")) {
-            this.UpdateBasketCountIcon();
-        }
+        this.UpdateListOfProductsOnMainPage();    
+        this.AddEventsOnCategories();
+        this.UpdateMainPage();
     },
 
 
-    UpdateBasketCountIcon: function(){
-        let prods = JSON.parse(sessionStorage.getItem("products"));
-        let elem = document.querySelector(".header__basket--counter");
-        let count = 0;
-        if(prods !== null)
-        {
-            count = prods.length;
-        }
-        elem.textContent = count;
+    UpdateMainPage: function(){ 
+        this.AddEventsOnAddToBasket();
+        UpdateBasketCountIcon();
     },
 
     UpdateListOfProductsOnMainPage: function(categoryFilter){
@@ -104,6 +87,20 @@ const App = {
         }   
     },
 
+    AddEventsOnCategories: function(){
+
+        let navReferences = document.getElementsByClassName("nav__ref--category");
+
+        for (let i = 0; i < navReferences.length; i++) {
+            const element = navReferences[i];
+            element.addEventListener("click", this.showProductsInCategory);     
+        }
+    },
+
+    AddEventsOnAddToBasket: function(){
+        ButtonAdding.addEvents();
+    },
+
     getBasketCount: function() {
         return this.products.length;
     },
@@ -141,6 +138,7 @@ const App = {
         const catId = e.target.id;
         let categoryFilter = catId.substring(3);    
         App.UpdateListOfProductsOnMainPage(categoryFilter);
+        App.UpdateMainPage();
     },
 
     cleanListOfProductsOnPage(){
@@ -152,9 +150,10 @@ const App = {
             let element = products[0];
             mainElem.removeChild(element);
         }
-    }
+    },
+
 }
 
 App.Main();
 
-console.log("Index.js is loaded.")
+console.log("main.js is loaded.")

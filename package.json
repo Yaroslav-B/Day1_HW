@@ -278,7 +278,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev-server": "webpack serve"
+    "dev-server": "webpack serve",
+    "watch": "webpack watch"
   },
   "repository": {
     "type": "git",

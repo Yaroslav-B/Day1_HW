@@ -4,6 +4,16 @@ const Basket = {
     length: 0,
 
     UpdateBasketPage: () => {
+
+        let page = "";
+        page = location.href.split("/").slice(-1).toString(); 
+        if(!page.includes("basket")) 
+        {
+            return;
+        }
+
+        UpdateBasketCountIcon();
+        
         let products = Basket.getAddedProducts();
 
         if(length > 0)
@@ -44,8 +54,18 @@ const Basket = {
         }
         length = products.length;
         return products;
-    }  
+    },
 }
 
+export const UpdateBasketCountIcon = () => {
+    let prods = JSON.parse(sessionStorage.getItem("products"));
+    let elem = document.querySelector(".header__basket--counter");
+    let count = 0;
+    if(prods !== null)
+    {
+        count = prods.length;
+    }
+    elem.textContent = count;
+}  
+
 Basket.UpdateBasketPage();
-App.UpdateBasketCountIcon();

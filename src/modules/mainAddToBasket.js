@@ -1,8 +1,8 @@
 "use strict";
 
-console.log("buttonAddToBasket.js is loading...");
+import {UpdateBasketCountIcon} from './basket.js';
 
-const ButtonAdding = {
+export const ButtonAdding = {
     
     addNewProduct: (e) => {
         let product = {};
@@ -28,7 +28,8 @@ const ButtonAdding = {
         
         products[length] = product;
         sessionStorage.setItem("products", JSON.stringify(products));
-        App.UpdateBasketCountIcon();
+        UpdateBasketCountIcon();
+
         console.log("Added product:\n" + product.tittle + "\n" + product.description);
     },
 
@@ -39,15 +40,5 @@ const ButtonAdding = {
             const element = addingButtons[i];
             element.addEventListener("click", ButtonAdding.addNewProduct);     
         }
-    } 
+    },
 }
-
-
-ButtonAdding.addEvents();
-
-console.log("buttonAddToBasket.js is loaded.");
-
-
-
-
-

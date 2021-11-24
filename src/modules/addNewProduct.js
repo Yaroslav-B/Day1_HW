@@ -1,6 +1,6 @@
 "use strict";
 
-console.log("addingNewProduct.js is loading...");
+console.log("addNewProduct.js is loading...");
 
 const AddingNewProductToStore = {
     
@@ -52,4 +52,4 @@ const AddingNewProductToStore = {
 
 AddingNewProductToStore.addEvents();
 
-console.log("addingNewProduct.js is loaded.");
+console.log("addNewProduct.js is loaded.");
